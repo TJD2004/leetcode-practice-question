@@ -1,4 +1,4 @@
-// 53. Maximum Subarrray (Kandan's Problem)
+// 53. Maximum Subarrray (Kandan's Algorithm)
 
 class Solution {
     public int maxSubArray(int[] nums) {
