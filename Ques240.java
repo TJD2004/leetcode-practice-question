@@ -5,23 +5,18 @@ class Solution {
         int rows = matrix.length;
         int cols = matrix[0]. length;
 
-        for(int i=0; i<rows; i++) {
-            int s = 0;
-            int e = cols - 1;
+        int s = 0;
+        int e = cols -1;
 
-            while(s <= e) {
-                int mid = s + (e-s)/2;
-
-                if(matrix[i][mid] == target) {
-                    return true;
-                } else if(matrix[i][mid] > target) {
-                    e = mid - 1;
-                } else {
-                    s = mid + 1;
-                }
+        while(s < rows && e >= 0) {
+            if(matrix[s][e] == target) {
+                return true;
+            } else if(matrix[s][e] > target) {
+                e--;
+            } else {
+                s++;
             }
         }
-
         return false;
     }
 }
